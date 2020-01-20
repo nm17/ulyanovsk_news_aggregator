@@ -1,0 +1,4 @@
+pymongo
+sanic
+sanic-jinja2
+scrapy

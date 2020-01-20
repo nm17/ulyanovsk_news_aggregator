@@ -1,0 +1,13 @@
+{% extends "base.jinja2" %}
+{% block cont %}
+    <div class="card">
+        <div class="d-flex p-2 justify-content-center">
+            <img class="card-img-top rounded" src="{{ article.img }}" alt="Card image cap" style="max-width: 450px">
+        </div>
+
+        <div class="card-body">
+            <h3 class="card-title">{{ article.header }}</h3>
+            <p class="card-text">{{ article.text.replace("\n", "<br>") }}</p>
+        </div>
+    </div>
+{% endblock %}

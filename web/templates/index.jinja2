@@ -1,0 +1,27 @@
+{% extends "base.jinja2" %}
+{% block cont %}
+    {% for article in articles %}
+        <div class="row rounded">
+            <div class="col-sm">
+                <div class="card mt-2 bt-2">
+                    <div class="row no-gutters">
+                        <div class="col-auto">
+                            <img src="{{ article.img }}" class="img-fluid rounded-left" alt="">
+                        </div>
+                        <div class="col">
+                            <div class="card-block px-2">
+                                <h4 class="card-title mt-3">{{ article.header }}</h4>
+                                <p class="card-text">{{ article.text|truncate }}</p>
+                                <a href="/article/{{ article._id|string }}" class="btn btn-primary">Читать...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer w-100 text-muted">
+                        Дата: {{ article.date }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
